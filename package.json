@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/marcoTulio94/Designs_project2/issues"
   },
-  "homepage": "https://github.com/marcoTulio94/Designs_project2#readme"
+  "homepage": "https://github.com/marcoTulio94/Designs_project2#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.52.3"
+  }
 }
