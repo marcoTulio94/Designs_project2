@@ -1,0 +1,125 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header__title{
+    margin: 0 0;
+    font-size: 4rem;
+    font-weight: 400;
+
+    span{
+        font-weight: 700;
+    }
+
+    @include m.desktop{
+        font-size: 6rem;
+    }
+}
+
+
+.header__top{
+    text-align: center;
+
+    @include m.tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header__contact{
+    
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+    ul{
+        padding: 0;
+        
+    }
+    @include m.tablet{
+        
+        align-items: flex-end;
+    }
+}
+
+
+
+.header__navbar{
+    display: flex;
+    flex-direction: column;
+ 
+
+
+    @include m.tablet{
+        flex-direction: row;
+    }
+}
+
+
+
+.header__contact a{
+    
+    cursor: pointer;
+    padding: 1rem;
+    transition:  all .3s ease-in-out;
+    
+    
+    &:hover{
+        color: v.$color_secondary;
+        background-color: rgba(174, 219, 206,0.3) ;
+    }
+
+    @include m.desktop{
+        font-size: 2rem;
+        padding: 1rem 1.5rem;
+    }
+    
+}
+
+.header__navbar{
+    li{
+        text-align: center;
+        margin-top: 2rem;
+        
+    }
+}
+
+.toggle__button{
+    display: none;
+    font-size: 4rem;
+    display: inline-block;
+}
+
+.navbar-links {
+    transition: all .4s ease-in-out;
+}
+
+@media (max-width: v.$tablet) {
+    
+    .navbar-links {
+        opacity: 0;
+    }
+
+    .navbar-links.active {
+        opacity: 1;
+    }
+
+}
+
+@include m.tablet{
+
+    .toggle__button{
+        display: none;
+    }
+}
+
+.header__phone{
+    position: relative;
+}
+
+.fa-phone-flip{
+    margin-right: 2rem;
+}

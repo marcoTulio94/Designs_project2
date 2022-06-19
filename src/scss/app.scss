@@ -1,0 +1,13 @@
+
+
+
+@use './base/index';
+@use './header/indexHeader';
+@use './about/about';
+@use './topTravels/indexTrip';
+@use './galery/galery';
+@use './footer/footer';
+
+
+
+// sass --watch 'src/scss/app.scss' 'build/css/index.css'

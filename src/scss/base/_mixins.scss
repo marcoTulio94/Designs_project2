@@ -1,0 +1,36 @@
+
+@use './variables' as v;
+
+
+@mixin phone {
+    @media (min-width: v.$phone){
+        @content
+    }
+};
+
+@mixin tablet {
+    @media (min-width: v.$tablet){
+        @content;
+    }
+};
+
+@mixin desktop{
+    @media (min-width: v.$desktop){
+        @content;
+    }
+};
+
+@mixin grid($rows:1,$col:1){
+    display: grid;
+    grid-template-columns: repeat($col,1fr);
+    grid-template-rows: repeat($rows,1fr);
+    @content;
+};
+
+@mixin flex($direction:row,$justify:center,$align:center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $jusitfy;
+    align-items: $align;
+    @content;
+};

@@ -1,0 +1,59 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.notavif .notwebp{
+    background-image: url(../img/footer_img.jpg);
+}
+.avif .footer{
+    background-image: url(../img/footer_img.avif);
+}
+.webp .footer{
+    background-image: url(../img/footer_img.webp);
+}
+
+.footer{
+    margin-top: 4rem;
+    padding: 2rem 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+
+    position: relative;
+
+    @include m.tablet{
+        background-position: center top;
+    }
+}
+
+.footer__container{
+    color: v.$white;
+    position: relative;
+   
+}
+
+.footer:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: v.$black;
+    opacity: 0.5;
+}
+
+
+.footer__div{
+    
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include m.desktop{
+        min-height: 40vh;
+        
+    }
+}

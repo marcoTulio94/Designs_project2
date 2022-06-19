@@ -1,0 +1,90 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.trips{
+    margin-top: 4rem;
+
+}
+
+.trips__title{
+    text-transform: uppercase;
+    @include m.desktop{
+        font-size: 5rem;
+    }
+}
+
+
+.trip__container{
+    
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    min-height: 50rem;
+
+    
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    @include m.tablet{
+        grid-template-columns: repeat(2,1fr);
+        background-size: 80%;
+    }
+    @include m.desktop{
+        background-size: 70%;
+    }
+}
+
+@include m.tablet{
+
+    .trip-1{
+        background-position: right top;
+
+        .trip{
+            grid-row: 2/3;
+        }
+    }
+   .trip-2{
+        background-position: left bottom;
+        .trip{
+            grid-column: 2/3;
+        }
+   }
+   .trip-3{
+    background-position: right bottom;
+    
+   }
+}
+
+.trip{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 4rem;
+
+    background-color: v.$color_primary;
+}
+
+.trip__title{
+    margin-bottom: 2rem;
+
+   
+}
+.trip button{
+    all: unset;
+    width: 15rem;
+    padding: 1rem 1.5rem;
+    border: .5px solid v.$color_terciary;
+    background-color: v.$color_secondary;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    
+    &:hover{
+        background-color: v.$color_terciary;
+        color: v.$white;
+    }
+}
+
+
+
+
